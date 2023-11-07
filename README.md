@@ -1,4 +1,4 @@
 # test-repo
-This is a test repository for Jenkins
+This is a test repository
 new try
 hello again
