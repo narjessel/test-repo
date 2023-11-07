@@ -24,4 +24,4 @@ class TestEcontrolExample:
          chrome_driver.find_element(By.XPATH, "//button[@type='submit']").click()
          sleep(5)
       
-         chrome_driver.close()
+         #chrome_driver.close()
