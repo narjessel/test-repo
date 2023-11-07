@@ -6,7 +6,7 @@ from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.by import By
 from time import sleep
  
-def test_lambdatest_todo_app():
+def test_econtrol():
     options = webdriver.ChromeOptions()
     options.add_experimental_option('excludeSwitches', ['enable-logging'])
     chrome_driver = webdriver.Chrome(options=options)
