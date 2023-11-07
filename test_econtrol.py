@@ -8,9 +8,9 @@ from time import sleep
  
 def test_econtrol():
     options = webdriver.ChromeOptions()
-    options.add_argument('--no-sandbox')
-    options.add_argument('--disable-dev-shm-usage')
-    options.add_argument('--headless')
+    options.add_argument("--no-sandbox")
+    options.add_argument("--disable-dev-shm-usage")
+    options.add_argument("--headless")
     options.add_experimental_option('excludeSwitches', ['enable-logging'])
     chrome_driver = webdriver.Chrome(options=options)
     
