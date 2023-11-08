@@ -18,7 +18,8 @@ def setup(request):
     "--ignore-certificate-errors",
     "--disable-extensions",
     "--no-sandbox",
-    "--disable-dev-shm-usage"
+    "--disable-dev-shm-usage",
+    "--disable-browser-side-navigation"
 ]
     for option in options:
         chrome_options.add_argument(option)
