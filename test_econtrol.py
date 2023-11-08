@@ -9,11 +9,11 @@ class TestEcontrolExample:
     def test_econtrol(self):
         print("hereeeeeeeeeee")
         #self.driver.get('http://192.168.10.44:8080/econtrol/login')
-        self.driver.get('https://www.google.com/')
+        self.driver.get('https://ectest.somone.fr/econtrol/login/')
         sleep(5)
       
         username = "admin"
-        password = "econtrol"
+        password = "econtrolsomone2023"
      
         username_text_field= self.driver.find_element(By.ID, "login")
         username_text_field.send_keys(username)
