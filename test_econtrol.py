@@ -6,7 +6,7 @@ from time import sleep
 
 @pytest.mark.usefixtures("setup")
 class TestEcontrolExample:
-     def test_econtrol():
+     def test_econtrol(self):
          chrome_driver.get('http://192.168.10.44:8080/econtrol/login')
          chrome_driver.maximize_window()
       
