@@ -6,21 +6,21 @@ from time import sleep
 
 @pytest.mark.usefixtures("setup")
 class TestEcontrolExample:
-     def test_econtrol(self):
-         self.driver.get('http://192.168.10.44:8080/econtrol/login')
+    def test_econtrol(self):
+        self.driver.get('http://192.168.10.44:8080/econtrol/login')
       
-         username = "admin"
-         password = "econtrol"
+        username = "admin"
+        password = "econtrol"
      
-         username_text_field= self.driver.find_element(By.ID, "login")
-         username_text_field.send_keys(username)
+        username_text_field= self.driver.find_element(By.ID, "login")
+        username_text_field.send_keys(username)
      
-         password_text_field= self.driver.find_element(By.ID, "passe")
-         password_text_field.send_keys(password)
+        password_text_field= self.driver.find_element(By.ID, "passe")
+        password_text_field.send_keys(password)
      
-         #sleep(5)
+        #sleep(5)
       
-         self.driver.find_element(By.XPATH, "//button[@type='submit']").click()
-         #sleep(5)
+        self.driver.find_element(By.XPATH, "//button[@type='submit']").click()
+        #sleep(5)
       
-         #chrome_driver.close()
+        #chrome_driver.close()
