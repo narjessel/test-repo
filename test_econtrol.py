@@ -9,7 +9,7 @@ class TestEcontrolExample:
      def test_econtrol(self):
           sleep(5)
          self.driver.get('http://192.168.10.44:8080/econtrol/login')
-         self.driver.maximize_window()
+         #self.driver.maximize_window()
       
          username = "admin"
          password = "econtrol"
