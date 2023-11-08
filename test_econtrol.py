@@ -7,9 +7,10 @@ from time import sleep
 @pytest.mark.usefixtures("setup")
 class TestEcontrolExample:
     def test_econtrol(self):
-        sleep(3)
-        self.driver.get('http://192.168.10.44:8080/econtrol/login')
-        sleep(3)
+        print("hereeeeeeeeeee")
+        #self.driver.get('http://192.168.10.44:8080/econtrol/login')
+        self.driver.get('https://www.google.com/')
+        sleep(5)
       
         username = "admin"
         password = "econtrol"
