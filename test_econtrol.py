@@ -7,7 +7,7 @@ from time import sleep
 @pytest.mark.usefixtures("setup")
 class TestEcontrolExample:
     def test_econtrol(self):
-        print("hereeeeeeeeeee")
+        print("Authentification test")
         self.driver.get('https://ectest.somone.fr/econtrol/login/')
         self.driver.maximize_window()
         sleep(5)
