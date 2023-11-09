@@ -15,13 +15,7 @@ jobs:
           python-version: '3.9'
       - name: Install software
         run: sudo apt-get install -y chromium-browser
-      - name: Update pip
-        run: pip install --upgrade pip
       - name: Install the necessary packages
         run: pip install requests webdriver-manager selenium pytest
-      - name: Check chromium version
-        run: chromium-browser --version
-      - name: Check selenium version
-        run: python -c "import selenium; print(selenium.__version__)"
       - name: Run the PyTest script
         run: pytest -rA
