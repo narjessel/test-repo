@@ -9,8 +9,6 @@ class TestEcontrolExample:
     def test_econtrol(self):
         print("Authentification test")
         self.driver.get('https://ectest.somone.fr/econtrol/login/')
-        self.driver.maximize_window()
-        sleep(5)
       
         username = "admin"
         password = "econtrolsomone2023"
@@ -20,10 +18,5 @@ class TestEcontrolExample:
      
         password_text_field= self.driver.find_element(By.ID, "passe")
         password_text_field.send_keys(password)
-     
-        #sleep(5)
       
         self.driver.find_element(By.XPATH, "//button[@type='submit']").click()
-        #sleep(5)
-      
-        #chrome_driver.close()
