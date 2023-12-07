@@ -5,30 +5,13 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions
 from selenium.webdriver.support.wait import WebDriverWait
 from time import sleep
+from pages.loginpage import TestLoginPage
 
 @pytest.mark.usefixtures("setup")
 class TestApplicationPage:
   def test_ajouteruneApplication(self):
-      print("Authentification")
-      self.driver.get('https://econtrol-dev.somone.fr/econtrol/login/')
-    
-      username = "narjess"
-      password = "narjess"
-  
-      username_text_field= self.driver.find_element(By.ID, "login")
-      username_text_field.send_keys(username)
-  
-      password_text_field= self.driver.find_element(By.ID, "passe")
-      password_text_field.send_keys(password)
-    
-      self.driver.find_element(By.XPATH, "//button[@type='submit']").click()
-      print("Ajouter une application")
-      self.driver.get('https://econtrol-dev.somone.fr/econtrol/admin/applications/')
-      self.driver.set_window_size(1382, 744)
-      
-      self.driver.find_element(By.LINK_TEXT, "Administration").click()
-      self.driver.find_element(By.CSS_SELECTOR, ".col-lg-3:nth-child(1) > .dashboard-stat").click()
-      self.driver.find_element(By.ID, "application_add").click()
+      login_page = TestLoginPage()
+      login_page.load()
 
       libelle = "AppAuto"
       Description = "Application créée pour les tests automatisés"
