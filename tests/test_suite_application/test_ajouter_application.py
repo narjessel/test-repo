@@ -43,5 +43,5 @@ class TestApplicationPage:
       element = self.driver.find_element(By.XPATH, "//a[contains(text(),'Enregistrer')]")
       self.driver.execute_script("arguments[0].click();", element)
 
-      self.driver.WaiElement(By.CssSelector(".toast-message"))
+      WebDriverWait(self.driver, 10).until(expected_conditions.presence_of_element_located((By.CSS_SELECTOR, ".toast-message")))
       assert self.driver.find_element(By.CSS_SELECTOR, ".toast-message").text == "L\\\'application a bien été créée."
