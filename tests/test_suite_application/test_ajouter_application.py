@@ -11,7 +11,7 @@ from pages.loginpage import TestLoginPage
 class TestApplicationPage:
   def test_ajouteruneApplication(self):
       print("Authentification")
-      login_page = TestLoginPage
+      login_page = TestLoginPage(self)
       login_page.TestLoginPage()
     
       print("Ajouter une application")
