@@ -5,8 +5,8 @@ from selenium.webdriver.common.by import By
 from time import sleep
 
 @pytest.mark.usefixtures("setup")
-class TestLoginPage:
-  def test_simple_authentification(self):
+class TestApplicationPage:
+  def test_ajouteruneApplication(self):
       print("Authentification")
       self.driver.get('https://econtrol-dev.somone.fr/econtrol/login/')
     
@@ -20,9 +20,6 @@ class TestLoginPage:
       password_text_field.send_keys(password)
     
       self.driver.find_element(By.XPATH, "//button[@type='submit']").click()
-      assert self.driver.find_element(By.LINK_TEXT, "Matrice").text == "Matrice"
-    
-  def test_ajouteruneApplication(self):
       print("Ajouter une application")
       self.driver.get('https://econtrol-dev.somone.fr/econtrol/admin/applications/')
       
