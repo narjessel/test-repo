@@ -46,4 +46,4 @@ class TestApplicationPage:
       self.driver.execute_script("arguments[0].click();", element)
 
       WebDriverWait(self.driver, 10).until(expected_conditions.presence_of_element_located((By.CSS_SELECTOR, ".toast-message")))
-      assert self.driver.find_element(By.CSS_SELECTOR, ".toast-message").text == "L\\'application a bien été créée."
+      assert self.driver.find_element(By.CSS_SELECTOR, ".toast-message").text == "L'application a bien été créée."
