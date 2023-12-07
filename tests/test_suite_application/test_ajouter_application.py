@@ -8,7 +8,7 @@ from time import sleep
 class TestLoginPage:
   def test_simple_authentification(self):
       print("Authentification")
-      self.driver.get('https://ectest-dev.somone.fr/econtrol/login/')
+      self.driver.get('https://econtrol-dev.somone.fr/econtrol/login/')
     
       username = "narjess"
       password = "narjess"
@@ -24,7 +24,7 @@ class TestLoginPage:
     
   def test_ajouteruneApplication(self):
       print("Ajouter une application")
-      self.driver.get('https://ectest-dev.somone.fr/econtrol/admin/applications/')
+      self.driver.get('https://econtrol-dev.somone.fr/econtrol/admin/applications/')
       
       self.driver.find_element(By.LINK_TEXT, "Administration").click()
       self.driver.find_element(By.CSS_SELECTOR, ".col-lg-3:nth-child(1) > .dashboard-stat").click()
