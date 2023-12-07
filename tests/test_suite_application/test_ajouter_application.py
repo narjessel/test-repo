@@ -23,8 +23,8 @@ class TestLoginPage:
     
   def test_ajouteruneApplication(self):
       print("Ajouter une application")
-      self.driver.get("https://ectest-dev.somone.fr/econtrol/admin")
-      self.driver.set_window_size(1382, 744)
+      self.driver.get('https://ectest-dev.somone.fr/econtrol/admin/applications/')
+      
       self.driver.find_element(By.LINK_TEXT, "Administration").click()
       self.driver.find_element(By.CSS_SELECTOR, ".col-lg-3:nth-child(1) > .dashboard-stat").click()
       self.driver.find_element(By.ID, "application_add").click()
