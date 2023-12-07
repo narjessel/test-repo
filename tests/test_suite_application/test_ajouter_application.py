@@ -20,6 +20,7 @@ class TestLoginPage:
       password_text_field.send_keys(password)
     
       self.driver.find_element(By.XPATH, "//button[@type='submit']").click()
+      assert self.driver.find_element(By.LINK_TEXT, "Matrice").text == "Matrice"
     
   def test_ajouteruneApplication(self):
       print("Ajouter une application")
