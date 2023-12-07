@@ -14,7 +14,7 @@ class TestLoginPage:
 
   def test_simple_authentification(self):
       print("Authentification test")
-      self.driver.get(self.URL)
+      self.driver.get('https://ectest.somone.fr/econtrol/login/')
     
       username = "admin"
       password = "econtrolsomone2023"
