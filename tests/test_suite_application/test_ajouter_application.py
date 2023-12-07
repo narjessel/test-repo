@@ -11,18 +11,9 @@ from pages.loginpage import TestLoginPage
 class TestApplicationPage:
   def test_ajouteruneApplication(self):
       print("Authentification")
-      self.driver.get('https://econtrol-dev.somone.fr/econtrol/login/')
+      login_page = TestLoginPage
+      login_page.TestLoginPage()
     
-      username = "narjess"
-      password = "narjess"
-  
-      username_text_field= self.driver.find_element(By.ID, "login")
-      username_text_field.send_keys(username)
-  
-      password_text_field= self.driver.find_element(By.ID, "passe")
-      password_text_field.send_keys(password)
-    
-      self.driver.find_element(By.XPATH, "//button[@type='submit']").click()
       print("Ajouter une application")
       self.driver.get('https://econtrol-dev.somone.fr/econtrol/admin/applications/')
       self.driver.set_window_size(1382, 744)
