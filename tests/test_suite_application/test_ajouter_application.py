@@ -41,5 +41,5 @@ class TestApplicationPage:
       nomhyperviseur_text_field.send_keys(libelle)
 
       self.driver.execute_script("window.scrollTo(0,0)")
-      self.driver.find_element(By.LINK_TEXT, "Enregistrer").click()
+      self.driver.find_element(By.XPATH, "//a[contains(text(),'Enregistrer')]").click()
       assert self.driver.find_element(By.CSS_SELECTOR, ".toast-message").text == "L\\\'application a bien été créée."
