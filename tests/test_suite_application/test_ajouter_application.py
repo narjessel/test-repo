@@ -12,7 +12,7 @@ class TestApplicationPage:
   def test_ajouteruneApplication(self):
       print("Authentification")
       login_page = TestLoginPage(self)
-      login_page.TestLoginPage()
+      login_page.test_simple_authentification()
     
       print("Ajouter une application")
       self.driver.get('https://econtrol-dev.somone.fr/econtrol/admin/applications/')
