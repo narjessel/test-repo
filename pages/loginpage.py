@@ -9,8 +9,8 @@ class TestLoginPage:
   # URL
   URL = 'https://ectest.somone.fr/econtrol/login/'
 
-  def __init__(self, setup):  #__init__ method, acts like the constructor. It takes in the browser, which will be passed in from the test case.
-      self.setup = setup
+  # def __init__(self):  #__init__ method, acts like the constructor. It takes in the browser, which will be passed in from the test case.
+  #     pass
 
   def load(self):
       pass
